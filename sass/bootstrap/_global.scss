@@ -1,0 +1,151 @@
+//
+// Global CSS
+// --------------------------------------------------
+
+/* icon */
+
+[class*='icon-'] {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+
+	[class^="ficon-"], [class*=" ficon-"] {
+	    position: relative;
+	    top: 50%;
+	    @include translateY(-50%);
+	}
+}
+
+/*Home CSS*/
+.reward-block{
+	figure{margin-bottom:15px;}
+
+	@media(max-width:$screen-xs-max){
+		margin-bottom:20px;	
+		h2{
+			font-size:$font-size-large;		
+		}
+	}
+	p{line-height:1.5;}
+	.btn-lg{
+		padding:$padding-base-vertical $padding-base-horizontal; 
+		max-width:410px;
+	}
+}
+
+
+
+/* advisor */
+.advisor{
+	text-align:center;
+	.icon{
+		font-size:40px;
+		display:block;
+		margin-bottom:20px;
+		> i{
+			color:$gray-light;
+			vertical-align:top;
+		}
+	}
+	.advisor-body{
+		.content{		
+			max-width:730px;
+			width:100%;
+			margin:0 auto;	
+			p{
+				font-family:$font-family-default;
+				font-style: italic;
+				line-height:1.46;
+				margin-bottom:20px;
+				font-size:$font-size-elarge;
+				@media(min-width:$screen-sm-min){
+					font-size:$font-size-large - 2;
+				}
+			}
+		}
+		.caption{
+			.title{
+				font-size:$font-size-exlarge;
+				margin-bottom:5px;
+			}
+			.text{color:#8b8b97; font-size:$font-size-small;}
+		}
+	}	
+	.advisor-footer{
+	}
+	.list-thumb{
+		margin:0 auto;
+		max-width:406px;
+		width:100%;	
+		text-align:center;
+		@media(max-width:$screen-xs-max){
+			width:290px;	
+			max-width:auto;
+		}
+		.list-item{		
+			width:84px;	
+			.circle-img{
+				width:64px;
+				height:64px;
+				border-radius:50%;
+				overflow:hidden;
+				@include overlay(255, 255, 255, 0.7);  
+				margin:10px;
+				@include transition(all 0.3s ease);
+				a{
+					display:block;
+					img{
+						display: block;
+					    max-width: 100%;
+					    height: auto;
+					}
+				}
+				&:after{
+					@include transition(all 0.5s);
+				}
+
+			}
+			&.slick-center{
+				.circle-img{
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+					&:after{						
+						background-color:transparent;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+.slider-advisor .slick-slide{visibility:hidden; opacity:0; overflow:hidden;}
+.slider-advisor.slick-initialized .slick-slide{visibility:visible;opacity:1; overflow:hidden;}
+.slider-advisor{
+	padding-bottom:40px;
+}
+
+.slider-advisor-nav {	
+	padding-top:20px;
+	.slick-dots {
+		bottom:100%;
+	    li {
+	    	margin:0;
+	        button {
+	        	@include square(18px);
+	        	border:1px solid #02d59d;
+	        	border-radius:50%;
+	        	padding:0;
+	        	position:relative;
+	            &:before {
+	            	color: #02d59d;
+	            	opacity: 1;
+	            	font-size:30px;
+	            	@include square(18px);
+    				top: 50%;
+				    left: 50%;
+				    transform: translate(-50%, -50%);
+	            }
+	        }	        
+	    }
+	}
+}

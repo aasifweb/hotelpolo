@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import "fonts/variables";
+@import "fonts/mixins"; 
+@import "fonts/Regular";
+@import "fonts/Medium";
+@import "fonts/Bold";
+@import "fonts/Black";
+
+
+//MalisiaScript
+@font-face {
+    font-family: 'MalisiaScript';
+    src: url('../fonts/MalisiaScript.woff2') format('woff2'),
+        url('../fonts/MalisiaScript.woff') format('woff'),
+        url('../fonts/MalisiaScript.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}

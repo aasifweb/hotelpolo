@@ -1,0 +1,448 @@
+.lolo-towerrs-text {
+    margin-left: 24px;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #484848;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.overlay-list-menu {
+    li {
+        list-style: none;
+        a {
+
+            font-size: 36px;
+            font-weight: bold;
+            color: #757575;
+            padding: 0;
+            &.destination-heading {
+
+                font-size: 72px;
+                font-weight: bold;
+                color: #757575;
+            }
+        }
+    }
+}
+
+
+
+.home-page-slider-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 1;
+    position: relative;
+    .banner-slider { 
+    	.item{    		
+		    &:after {
+		        display: block;
+		        content: '';
+		        position: absolute;
+		        width: 100%;
+		        height: 100%;
+		        top: 0;
+		        left: 0;
+		        background:rgba(0,0,0,0.4);
+		        z-index:1;
+		    }
+    	}   	
+    }
+}
+
+.home-logo {
+	margin:25px 5px;
+	float:left;
+	transition: all 0.3s ease;
+	> img { width:140px; }
+	@media(min-width:$screen-sm-min) {
+	    margin:30px 15px;
+	    > img{width:auto;}
+	}
+}
+
+
+.home-nav {    
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+   
+    > .container-fluid{
+	    .navbar-brand {
+            position: relative;
+		    margin-left: 0;
+		    display: block;
+		    float: left;
+		    width: 50px;
+		    padding:20px 10px;
+		    margin: 13px 0;
+		    transition: all 0.3s ease; 
+		    @media(min-width:$screen-sm-min) {
+			    padding: 30px 10px;
+    			margin: 20px 0;
+			}
+	        span {
+	            width: 30px;            
+	            height: 1px;
+	            background: #fff;
+	            position:absolute;
+	            &:last-child {
+	                margin-top: 12px;
+	            }
+	        }
+	    }
+
+	    .navbar-right{
+	    	float:right;
+	    	margin:22px 0;
+	    	@media(min-width:$screen-sm-min) {
+		    	margin:30px 0;
+		    }
+
+		    .btn{
+		    	@media(max-width:$screen-xs-max) {
+	        		background-color:#fff;
+	        		color:$gray-darker;
+	        		border-color:#fff;
+	        		padding:7px;
+	        		font-size:$font-size-smaller;
+	        	}
+        	}
+	    }
+	}
+
+    &.affix {
+        top: 0px;
+        margin-top: 0px;
+        background:$brand-primary;
+        border-radius: 0;
+        position: fixed;   
+        transition: all 0.3s ease;    
+        .home-logo {
+			margin:18px 15px;
+		    @media(max-width:$screen-xs-max) {
+		    	margin:25px 5px;
+		    }
+		}
+         > .container-fluid{
+         	.navbar-brand {       
+	         	@media(min-width:$screen-sm-min) {     
+				    padding:20px 10px;
+				    margin: 15px 0;	
+				}
+			}	   
+	        .navbar-right{
+	        	.btn{
+	        		background-color:#fff;
+	        		color:$gray-darker;
+	        		border-color:#fff;
+	        	}
+	        	@media(min-width:$screen-sm-min) {     
+			    	margin:17px 0;		    	
+			    }
+		    }       
+	    }    
+    }
+    @media(max-width:$screen-xs-max) {
+        top: 0px;
+        background:$brand-primary;
+        border-radius: 0;
+        position: fixed !important;
+    }
+}
+
+
+
+.overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+.overlay-content {
+    position: relative; //top: 25%;
+    width: 100%;
+    margin-top: 30px;
+    padding-left: 57px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #090909;
+    transition: 0.3s all;
+}
+
+.overlay .closebtn {
+    font-size: 30px;
+    top: 15px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 30px;
+        top: 15px;
+        left: 35px;
+    }
+}
+
+.comming-soon-label {
+    background: #02d59d;
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: 9px;
+    font-weight: 900;
+    color: #ffffff;
+    padding-top: 3px;
+}
+
+.footer-menu-list {
+    li {
+        display: inline-block;
+        a {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.31;
+            letter-spacing: normal;
+            text-align: left;
+            color: #757575;
+        }
+    }
+}
+
+
+.slider-inner-box {
+    z-index: 2;
+    text-align: center;
+    @include transform-center();
+    width:100%;
+    .icon-box {
+        width: 56px;
+        height: 56px;
+        border: solid 2px #ffffff;
+        display: block;
+        margin: 10px auto;
+        border-radius: 100%;     
+        @media(min-width: $screen-sm-min) {
+        	margin: 0 auto 15px auto;
+        }   
+    }
+    .slider-heading {
+        font-weight: bold;        
+        text-align: center;
+        color: #ffffff;
+        margin-bottom:5px;
+        font-size:$font-size-exlarge;
+        @media(min-width: $screen-sm-min) {
+	        font-size: $font-size-h4;
+	    }
+    }
+    .slider-para {
+        font-family: $font-family-default;
+        text-align: center;
+        color: #ffffff;
+        font-style: italic;
+        font-size:$font-size-small;
+        max-width: 240px;
+	    width: 100%;
+	    margin: 0 auto;
+        @media(min-width: $screen-sm-min) {
+	        font-size: $font-size-base;        
+	    }
+    }
+}
+
+.navbar-header {
+    float: left;
+}
+
+//banner-slider css 
+.banner-container {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 10px;
+    max-width: 320px;
+    @include translateY(-50%);
+    @media(min-width: $screen-sm-min) {
+        left:224px;
+        max-width: 690px;
+    }
+}
+
+.banner-heading {
+    font-family: inherit;
+    padding: 0;
+    font-size: 30px;
+    @media(min-width: $screen-sm-min) {
+        font-size: 88px;
+    }
+    font-weight: 900;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.banner-content {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.slideshow {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    max-width: 100%;
+    margin: 0px auto;
+
+    * {
+        outline: none;
+    }
+
+    .slider {
+        box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+    }
+
+    .slider-track {
+        transition: all 8s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+
+    .item {
+        height: 100%;
+        position: relative; //z-index: 1;
+        img {
+            width: 100%;
+            transition: all 8s cubic-bezier(0.7, 0, 0.3, 1);
+            transform: scale(1);
+        }
+    }
+    .slick-active img {
+        transform: scale(1.1);
+    }
+}
+
+.slide-coount-info {
+    text-align: center;
+    .pagingInfo {
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        margin: 0 4px;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 24px;
+        i {
+            font-size: 12px;
+            color: white;
+            line-height: 15px;
+        }
+    }
+    position: absolute;
+    max-width: 100px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}
+
+.indicate-icon {
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    width: 14px;
+    max-width: 16px;
+    height: 22px;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    .indicate-circle {
+        width: 4px;
+        height: 4px;
+        border: 1px white solid;
+        border-radius: 100%;
+        position: relative;
+        transform: translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        TOP: 39%;
+        left: 50%;
+
+        -webkit-animation: indicatearow 2s infinite;
+        -moz-animation: indicatearow 2s infinite;
+        -o-animation: indicatearow 2s infinite;
+        animation: indicatearow 2s infinite;
+
+
+        &:before {
+            LEFT: 1PX;
+            width: 1px;
+            height: 3px;
+            background: white;
+            content: "";
+            display: block;
+            position: absolute;
+            top: -4px
+        }
+        &:after {
+            LEFT: 1PX;
+            width: 1px;
+            height: 3px;
+            content: "";
+            background: white;
+            display: block;
+            position: absolute;
+            top: 3px;
+        }
+    }
+}
+
+@keyframes indicatearow {
+    from {
+        top: 39%;
+    }
+    to {
+        top: 60%;
+    }
+}
